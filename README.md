@@ -22,11 +22,11 @@ Start listening to any event type that matches your expected `Error` name:
 
 ```js
 // specific your handlers
-process.on('uncaughtException:*', (error) => {}) // catch-all event listener
-process.on('uncaughtException:Error', (error) => {})
-process.on('uncaughtException:TypeError', (error) => {})
-process.on('uncaughtException:CustomError', (error) => {})
-process.on('uncaughtException:DataBaseError', (error) => {})
+process.on('uncaughtException:*', error => {}) // catch-all event listener
+process.on('uncaughtException:Error', error => {})
+process.on('uncaughtException:TypeError', error => {})
+process.on('uncaughtException:CustomError', error => {})
+process.on('uncaughtException:DataBaseError', error => {})
 ```
 
 continue with building your business logic normally, and when an exception is thrown that matches one of your listener functions, that function will be called with the `Error` object passed as the only argument.
