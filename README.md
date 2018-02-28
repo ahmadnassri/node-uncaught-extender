@@ -58,8 +58,8 @@ Learn more on the [Official Node.js Documentation](https://nodejs.org/api/proces
 [license-url]: http://choosealicense.com/licenses/isc/
 [license-image]: https://img.shields.io/github/license/ahmadnassri/uncaught-exception-extender.svg?style=flat-square
 
-[travis-url]: https://travis-ci.org/ahmadnassri/uncaught-exception-extender
-[travis-image]: https://img.shields.io/travis/ahmadnassri/uncaught-exception-extender.svg?style=flat-square
+[travis-url]: https://travis-ci.org/ahmadnassri/node-uncaught-exception-extender
+[travis-image]: https://img.shields.io/travis/ahmadnassri/node-uncaught-exception-extender.svg?style=flat-square
 
 [npm-url]: https://www.npmjs.com/package/uncaught-exception-extender
 [npm-version]: https://img.shields.io/npm/v/uncaught-exception-extender.svg?style=flat-square
