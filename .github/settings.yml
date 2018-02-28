@@ -1,6 +1,6 @@
 repository:
-  name: node-uncaught-exception-extender
-  description: Extends process.on('uncaughtException') with custom handlers
+  name: node-uncaught-extender
+  description: Extends uncaughtException and unhandledRejection with custom listeners
   topics: node, javascript, process, exception, uncaughtException
   homepage: https://www.ahmadnassri.com
   private: false

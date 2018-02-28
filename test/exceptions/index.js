@@ -1,10 +1,10 @@
 'use strict'
 
-const uncaughtExceptionHandler = require('..')
+const { uncaughtException } = require('../..')
 
 const tap = require('tap')
 
-process.on('uncaughtException', uncaughtExceptionHandler)
+process.on('uncaughtException', uncaughtException)
 
 process.on('uncaughtException:TypeError', error => {
   tap.test('capture normal errors', assert => {

@@ -1,12 +1,12 @@
 {
   "version": "0.0.0-development",
-  "name": "uncaught-exception-extender",
-  "description": "a Promise extension that provides filtered catch handler",
+  "name": "uncaught-extender",
+  "description": "Extends uncaughtException and unhandledRejection with custom listeners",
   "author": "Ahmad Nassri <ahmad@ahmadnassri.com> (https://www.ahmadnassri.com/)",
-  "homepage": "https://github.com/ahmadnassri/node-uncaught-exception-extender",
+  "homepage": "https://github.com/ahmadnassri/node-uncaught-extender",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ahmadnassri/node-uncaught-exception-extender.git"
+    "url": "https://github.com/ahmadnassri/node-uncaught-extender.git"
   },
   "license": "ISC",
   "main": "index.js",
@@ -22,7 +22,7 @@
     "index.js"
   ],
   "bugs": {
-    "url": "https://github.com/ahmadnassri/node-uncaught-exception-extender/issues"
+    "url": "https://github.com/ahmadnassri/node-uncaught-extender/issues"
   },
   "scripts": {
     "pretest": "npm run test:codeclimate",
