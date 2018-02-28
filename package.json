@@ -1,0 +1,38 @@
+{
+  "version": "0.0.0-development",
+  "name": "uncaught-exception-extender",
+  "description": "a Promise extension that provides filtered catch handler",
+  "author": "Ahmad Nassri <ahmad@ahmadnassri.com> (https://www.ahmadnassri.com/)",
+  "homepage": "https://github.com/ahmadnassri/node-uncaught-exception-extender",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmadnassri/node-uncaught-exception-extender.git"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "keywords": [
+    "uncaught",
+    "exception",
+    "uncaught-exception"
+  ],
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "index.js"
+  ],
+  "bugs": {
+    "url": "https://github.com/ahmadnassri/node-uncaught-exception-extender/issues"
+  },
+  "scripts": {
+    "pretest": "npm run test:codeclimate",
+    "test": "npm run test:tap",
+    "test:codeclimate": ".scripts/codeclimate analyze",
+    "test:tap": "tap test --coverage-report=lcov --no-browser",
+    "coverage": "opener coverage/lcov-report/index.html"
+  },
+  "devDependencies": {
+    "@ahmadnassri/error": "^1.1.0",
+    "tap": "^11.1.1"
+  }
+}
