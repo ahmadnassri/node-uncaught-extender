@@ -1,7 +1,7 @@
 repository:
   name: node-uncaught-extender
   description: Extends uncaughtException and unhandledRejection with custom listeners
-  topics: node, javascript, process, exception, uncaughtException
+  topics: node, javascript, process, exception, uncaughtException, unhandledRejection
   homepage: https://www.ahmadnassri.com
   private: false
   has_issues: true
