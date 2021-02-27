@@ -1,0 +1,8 @@
+version: 2.0
+
+id: uncaught-extender
+
+about:
+  title: uncaughtException & unhandledRejection Extender
+  description: Extends uncaughtException and unhandledRejection with custom listeners
+  repository: ahmadnassri/node-uncaught-extender
