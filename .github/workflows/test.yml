@@ -45,11 +45,10 @@ jobs:
         run: echo "::set-output name=matrix::$(jq -c . < .github/matrix.json)"
 
   test:
-    needs: strategy
+    needs: [ strategy, audit ]
 
     timeout-minutes: 5
 
-    needs: audit
 
     strategy:
       matrix: ${{ fromJSON(needs.strategy.outputs.matrix) }}
