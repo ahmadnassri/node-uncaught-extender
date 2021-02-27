@@ -10,7 +10,7 @@ Extends uncaughtException and unhandledRejection with custom listeners
 
 ## Usage
 
-Use the native [`uncaughtException`][] or ['unhandledRejection'][] to setup:
+Use the native [`uncaughtException`](https://nodejs.org/api/process.html#process_event_uncaughtexception) or ['unhandledRejection'](https://nodejs.org/api/process.html#process_event_unhandledrejection) to setup:
 
 > **IMPORTANT!** ensure this is declared as early as possible in your execution cycle
 
@@ -69,11 +69,7 @@ The event should not be used as an equivalent to `On Error Resume Next`.
 Unhandled exceptions inherently mean that an application is in an undefined state.
 Attempting to resume application code without properly recovering from the exception can cause additional unforeseen and unpredictable issues.
 
-Learn more on the [Official Node.js Documentation][]
-
-  [`uncaughtException`]: https://nodejs.org/api/process.html#process_event_uncaughtexception
-  ['unhandledRejection']: https://nodejs.org/api/process.html#process_event_unhandledrejection
-  [Official Node.js Documentation]: https://nodejs.org/api/process.html#process_warning_using_uncaughtexception_correctly
+Learn more on the [Official Node.js Documentation](https://nodejs.org/api/process.html#process_warning_using_uncaughtexception_correctly)
 
 ----
 > Author: [Ahmad Nassri](https://www.ahmadnassri.com/) &bull;
