@@ -1,5 +1,5 @@
 {
-  "version": "0.0.0-development",
+  "version": "0.0.0-semantically-released",
   "name": "uncaught-extender",
   "description": "Extends uncaughtException and unhandledRejection with custom listeners",
   "author": "Ahmad Nassri <ahmad@ahmadnassri.com> (https://www.ahmadnassri.com/)",
@@ -8,31 +8,34 @@
     "type": "git",
     "url": "https://github.com/ahmadnassri/node-uncaught-extender.git"
   },
-  "license": "ISC",
-  "main": "index.js",
+  "license": "MIT",
+  "main": "lib/index.js",
   "keywords": [
     "uncaught",
     "exception",
     "uncaught-exception"
   ],
   "engines": {
-    "node": ">=4"
+    "node": ">=12"
   },
   "files": [
-    "index.js"
+    "lib"
   ],
   "bugs": {
     "url": "https://github.com/ahmadnassri/node-uncaught-extender/issues"
   },
   "scripts": {
-    "pretest": "npm run test:codeclimate",
-    "test": "npm run test:tap",
-    "test:codeclimate": ".scripts/codeclimate analyze",
-    "test:tap": "tap test --coverage-report=lcov --no-browser",
-    "coverage": "opener coverage/lcov-report/index.html"
+    "test": "find test -type f -exec node {} \\;",
+    "test:clean": "rm -rf .nyc_output",
+    "test:report": "nyc report --reporter=html",
+    "test:coverage": "find test -type f -exec nyc --silent --no-clean node {} \\;",
+    "test:100": "nyc check-coverage --branches 100 --lines 100 --functions 100 --statements 100",
+    "test:ci": "npm run test:clean && npm run test:coverage && npm run test:100"
   },
   "devDependencies": {
-    "@ahmadnassri/error": "^1.1.1",
-    "tap": "^14.10.6"
+    "@ahmadnassri/error": "^1.1.2"
+  },
+  "dependencies": {
+    "nyc": "^15.1.0"
   }
 }

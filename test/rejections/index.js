@@ -1,17 +1,12 @@
-'use strict'
+const { unhandledRejection } = require('../../lib/')
 
-const { unhandledRejection } = require('../..')
-
-const tap = require('tap')
+const assert = require('assert')
 
 process.on('unhandledRejection', unhandledRejection)
 
 process.on('unhandledRejection:TypeError', (error, promise) => {
-  tap.test('capture custom errors', assert => {
-    assert.plan(2)
-    assert.type(promise, 'Promise')
-    assert.equal(error.message, 'unhandledRejection:TypeError')
-  })
+  assert.ok(promise instanceof Promise)
+  assert.strictEqual(error.message, 'unhandledRejection:TypeError')
 })
 
 Promise.reject(new TypeError('unhandledRejection:TypeError'))

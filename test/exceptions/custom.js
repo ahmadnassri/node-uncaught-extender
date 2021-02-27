@@ -1,8 +1,7 @@
-'use strict'
+const { uncaughtException } = require('../../lib/')
 
-const { uncaughtException } = require('../..')
+const assert = require('assert')
 
-const tap = require('tap')
 const ExtendableError = require('@ahmadnassri/error')
 
 class CustomError extends ExtendableError {}
@@ -10,10 +9,7 @@ class CustomError extends ExtendableError {}
 process.on('uncaughtException', uncaughtException)
 
 process.on('uncaughtException:CustomError', error => {
-  tap.test('capture custom errors', assert => {
-    assert.plan(1)
-    assert.equal(error.message, 'uncaughtException:CustomError')
-  })
+  assert.strictEqual(error.message, 'uncaughtException:CustomError')
 })
 
 throw new CustomError('uncaughtException:CustomError')
