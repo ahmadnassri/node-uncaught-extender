@@ -1,10 +1,3 @@
-
-## Install
-
-```bash
-npm install uncaught-extender
-```
-
 ## Usage
 
 Use the native [`uncaughtException`][uncaughtException] or ['unhandledRejection'][unhandledRejection] to setup:
@@ -36,8 +29,8 @@ process.on('unhandledRejection:CustomError', error => {})
 process.on('unhandledRejection:DataBaseError', error => {})
 ```
 
-continue with building your business logic normally, 
-and when an exception is thrown or a Promise is rejected without a `catch` that matches one of your listener functions, 
+continue with building your business logic normally,
+and when an exception is thrown or a Promise is rejected without a `catch` that matches one of your listener functions,
 that function will be called with the `Error` object passed as the only argument.
 
 If no match is found, the `Error` is thrown again to the main process.
@@ -60,10 +53,10 @@ throw new TypeError('this will be caught by uncaughtException:TypeError')
 
 ## Warning: Using `'uncaughtException'` correctly
 
-Note that `'uncaughtException'` is a crude mechanism for exception handling intended to be used only as a last resort. 
+Note that `'uncaughtException'` is a crude mechanism for exception handling intended to be used only as a last resort.
 
-The event should not be used as an equivalent to `On Error Resume Next`. 
-Unhandled exceptions inherently mean that an application is in an undefined state. 
+The event should not be used as an equivalent to `On Error Resume Next`.
+Unhandled exceptions inherently mean that an application is in an undefined state.
 Attempting to resume application code without properly recovering from the exception can cause additional unforeseen and unpredictable issues.
 
 Learn more on the [Official Node.js Documentation](https://nodejs.org/api/process.html#process_warning_using_uncaughtexception_correctly)
