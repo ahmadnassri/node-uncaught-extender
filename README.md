@@ -85,11 +85,5 @@ Learn more on the [Official Node.js Documentation][]
 [release-url]: https://github.com/ahmadnassri/node-uncaught-extender/releases
 [release-img]: https://badgen.net/github/release/ahmadnassri/node-uncaught-extender
 
-[super-linter-url]: https://github.com/ahmadnassri/node-uncaught-extender/actions?query=workflow%3Asuper-linter
-[super-linter-img]: https://github.com/ahmadnassri/node-uncaught-extender/workflows/super-linter/badge.svg
-
-[test-url]: https://github.com/ahmadnassri/node-uncaught-extender/actions?query=workflow%3Atest
-[test-img]: https://github.com/ahmadnassri/node-uncaught-extender/workflows/test/badge.svg
-
 [semantic-url]: https://github.com/ahmadnassri/node-uncaught-extender/actions?query=workflow%3Arelease
 [semantic-img]: https://badgen.net/badge/📦/semantically%20released/blue
