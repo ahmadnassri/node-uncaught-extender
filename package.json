@@ -22,7 +22,7 @@
     "uncaught-exception"
   ],
   "engines": {
-    "node": ">=12"
+    "node": ">=18"
   },
   "files": [
     "lib"
