@@ -40,6 +40,6 @@
     "@ahmadnassri/error": "^2.0.0"
   },
   "dependencies": {
-    "nyc": "^15.1.0"
+    "nyc": "^17.0.0"
   }
 }
